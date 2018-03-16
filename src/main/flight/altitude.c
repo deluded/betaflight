@@ -46,6 +46,7 @@
 #include "sensors/sensors.h"
 #include "sensors/barometer.h"
 #include "sensors/rangefinder.h"
+#include "io/gps.h"
 
 
 int32_t AltHold;
@@ -306,7 +307,12 @@ void calculateEstimatedAltitude(timeUs_t currentTimeUs)
 
 int32_t getEstimatedAltitude(void)
 {
+#ifdef USE_BARO 
     return estimatedAltitude;
+#else
+	int32_t alt = gpsSol.llh.alt;
+	return alt*100;
+#endif
 }
 
 int32_t getEstimatedVario(void)
