@@ -15,7 +15,6 @@ COMMON_SRC = \
             common/printf.c \
             common/streambuf.c \
             common/string_light.c \
-            common/strtol.c \
             common/time.c \
             common/typeconversion.c \
             config/config_eeprom.c \

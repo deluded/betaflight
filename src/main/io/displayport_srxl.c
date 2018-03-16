@@ -80,12 +80,6 @@ static bool srxlIsTransferInProgress(const displayPort_t *displayPort)
     return false;
 }
 
-static bool srxlIsSynced(const displayPort_t *displayPort)
-{
-    UNUSED(displayPort);
-    return true;
-}
-
 static int srxlHeartbeat(displayPort_t *displayPort)
 {
     UNUSED(displayPort);
@@ -126,7 +120,6 @@ static const displayPortVTable_t srxlVTable = {
     .isTransferInProgress = srxlIsTransferInProgress,
     .heartbeat = srxlHeartbeat,
     .resync = srxlResync,
-    .isSynced = srxlIsSynced,
     .txBytesFree = srxlTxBytesFree
 };
 

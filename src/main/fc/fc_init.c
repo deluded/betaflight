@@ -418,7 +418,7 @@ void init(void)
     }
 #endif
 
-#ifdef USE_BEEPER
+#ifdef BEEPER
     beeperInit(beeperDevConfig());
 #endif
 /* temp until PGs are implemented. */
