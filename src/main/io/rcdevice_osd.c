@@ -204,12 +204,6 @@ bool rcdeviceOSDIsTransferInProgress(const displayPort_t *displayPort)
     return false;
 }
 
-bool rcdeviceOSDIsSynced(const displayPort_t *displayPort)
-{
-    UNUSED(displayPort);
-    return true;
-}
-
 int rcdeviceOSDHeartbeat(displayPort_t *displayPort)
 {
     UNUSED(displayPort);
